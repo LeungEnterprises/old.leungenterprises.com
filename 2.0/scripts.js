@@ -1616,6 +1616,6 @@ $(function() {
   };
 })();
 
-particlesJS.load("particles-js", '/pJSconfig.json', function() {
+particlesJS.load("particles-js", './pJSconfig.json', function() {
   console.log('particlesJS loaded');
 });
