@@ -147,6 +147,7 @@
         position: fixed;
         bottom: 0;
         right: 0;
+       z-index: -1
       }
       .leung {
         font-size: 48px;
@@ -194,7 +195,7 @@
         logo.style.top = y + 'px';
         logo.style.left = x + 'px';
         logo.style.display = 'block';
-        logo.style.zIndex = '1';
+        logo.style.zIndex = '-1';
         logo.style.visibility = 'visible';
         var leung = document.createElement('span');
         leung.className = "leung";
