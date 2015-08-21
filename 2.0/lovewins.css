@@ -1,0 +1,19 @@
+#particles-js {
+  display: none;
+}
+#landing {
+  background: linear-gradient(to bottom, #ff0000 0%, #ff0000 17%, #ff7f00 17%, #ff7f00 33%, #ffff00 33%, #ffff00 49.75%, #09ba00 49.75%, #09ba00 67%, #005eff 67%, #005eff 83%, #ae00ff 83%, #ae00ff 100%);
+  color: #111;
+}
+@media screen and (max-width: 767px) {
+  #landing {
+    background: linear-gradient(to bottom, #ff0000 0%, #ff0000 33%, #ff7f00 33%, #ff7f00 47.75%, #ffff00 47.75%, #ffff00 62%, #09ba00 62%, #09ba00 75%, #005eff 75%, #005eff 90%, #ae00ff 90%, #ae00ff 100%);
+  }
+}
+#landing .btn-hollow {
+  border: 1px solid #fff;
+  color: #fff;
+}
+#landing .btn-hollow:hover {
+  color: #000
+}

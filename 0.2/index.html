@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<meta name="description" content="Leung Enterprises Web Design">
+		<meta name="keywords" content="web,design,leung,enterprises">
+		<meta name="author" content="Leung Enterprises">
+	
+		<title>Leung Enterprises</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		<link href="./css/stylesheet_base.css" rel="stylesheet"> <!-- base stylesheet -->
+		<link href="./css/stylesheet_768.css" rel="stylesheet" media="only screen and (max-device-width: 767px)"> <!-- xs devices -->
+		<link href="./css/stylesheet_992.css" rel="stylesheet" media="only screen and (min-width:768px) and (max-width:991px)"> <!-- sm devices -->
+		<link href="./css/stylesheet_1200.css" rel="stylesheet"  media="only screen and (min-device-width: 992px) and (max-width:1199px)"> <!-- md devices -->
+		<link href="./css/stylesheet_1200.css" rel="stylesheet"  media="only screen and (min-device-width: 1200px)"> <!-- lg devices -->	
+		
+		<link href="/lib/images/logo/favicon-256.png" rel="icon">
+		<link href="/lib/images/logo/favicon-256.png" rel="apple-touch-icon-precomposed"/>
+	</head>
+	<body data-spy="scroll" data-target=".navbar">
+		<div class="page" id="page1">
+			<header>
+				<div class="container">
+					<div class="col-xs-12 col-sm-4 col-md-7" id="logo-container">
+						<a href="#page1">
+							<div id="logo" class="text-center">
+									<span id="leung">LEUNG</span><br>
+									<span id="enterprises">ENTERPRISES</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-5" id="nav-container">
+						<nav class="navbar">
+							<ul class="nav navbar-nav">
+								<li><a href="#page1" style="display:none;">Home</a></li> <!-- without this, scrollspy will keep the underline under "services" at the top of the page. -->
+								<li><a href="#page2" id="about-link">About</a></li>
+								<li><a href="#page3" id="services-link">Services</a></li>
+								<li><a href="#page4" id="work-link">Work</a></li>
+								<li><a href="#page5" id="contact-link">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<div class="container page-content">
+				<div class="col-md-12 text-right">
+					<h1 class="image-header">Web Design and Development</h1>
+				</div>
+			</div>
+			<div class="text-center down-arrow-container"> <!-- positioned absolutely, relative to page1 -->
+				<a href="#page2" class="btn btn-default btn-circle down-arrow"><span class="fa fa-angle-double-down large"></span></a>
+			</div>
+		</div> <!-- page1 -->
+		<div class="image-spacer">
+		</div>
+		<div class="page" id="page2">
+			<div class="jumbotron full-height text-center">
+				<div class="container page-content-smaller">
+					<h2>About</h2>
+					<div class="desktop-spacer">
+					</div>
+					<div class="col-xs-12 col-md-6" id="about-nathan">
+						<span class="fa fa-user xlarge"></span>
+						<br>
+						<br>
+						<p>Hi, I'm Nathan.</p>
+					</div>
+					<div class="col-xs-12 col-md-6" id="about-tech">
+						<span class="fa fa-html5 xlarge"></span>
+						<br>
+						<br>
+						<p>Skills</p>
+					</div>
+				</div>
+				<div class="container" id="about-fulltext">
+					<div class="col-xs-12 col-md-6">
+						<span class="p">I'm a web designer based in Southeastern Pennsylvania who can develop your amazing website.  Let's get <a href="#page5">in touch</a>.</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span class="p">I have three years of experience using modern web technologies such as HTML5 and CSS3 to build responsive websites using the Twitter bootstrap framework.
+										I am also proficient in the use of Javascript and jQuery to enhance the user experience, and I can also build content management systems with PHP and SQL databases.</span>
+					</div>
+				</div>
+			</div>
+			<div class="text-center down-arrow-container"> <!-- positioned absolutely, relative to page1 -->
+				<a href="#page3" class="btn btn-default btn-circle down-arrow"><span class="fa fa-angle-double-down large"></span></a>
+			</div>
+		</div> <!-- page2 -->
+		<div class="image-spacer">
+		</div>
+		<div class="page" id="page3">
+			<div class="jumbotron full-height text-center">
+				<div class="container page-content-smaller">
+					<h2>Services</h2>
+					<div class="desktop-spacer">
+					</div>
+					<div class="row-mobile">
+						<div class="col-xs-12 col-sm-6 col-md-3" id="resp-desc">
+							<span class="fa fa-desktop xlarge"></span>
+							<br>
+							<br>
+							<p>Responsive Web Design</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3" id="brand-desc">
+							<span class="fa fa-cube xlarge"></span>
+							<br>
+							<br>
+							<p>Branding and Graphics</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-3" id="ui-desc">
+							<span class="fa fa-eye-slash xlarge"></span>
+							<br>
+							<br>
+							<p>UI/UX Development</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3" id="dep-desc">
+							<span class="fa fa-rocket xlarge"></span>
+							<br>
+							<br>
+							<p>Deployment</p>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="service-descriptions">
+					<div class="col-md-3">
+						<span class="p">Utilization of the Twitter Bootstrap framework, creating mobile-first websites quickly and efficiently while still upholding relevant web standards.</span>
+					</div>
+					<div class="col-md-3">
+						<span class="p">Graphics and websites for your business, establishing a clear and consistent image to build and retain a large online presence.</span>
+					</div>
+					<div class="col-md-3">
+						<span class="p">User-first philosophy with specialized UI and UX development in order for you to give your users the best and most pleasant experience possible.</span>
+					</div>
+					<div class="col-md-3">
+						<span class="p">All-in-one domain registration, hosting, and SSL package to allow you to focus on building your business rather than putting up your website.</span>
+					</div>
+				</div>
+			</div> <!-- jumbotron -->
+			<div class="text-center down-arrow-container"> <!-- positioned absolutely, relative to page1 -->
+				<a href="#page4" class="btn btn-default btn-circle down-arrow"><span class="fa fa-angle-double-down large"></span></a>
+			</div>
+		</div> <!-- page3 -->
+		<div class="image-spacer">
+		</div>
+		<div class="page" id="page4">
+			<div class="jumbotron full-height text-center">
+				<div class="container page-content-smaller">
+					<h2>Work</h2>
+					<div class="desktop-spacer">
+					</div>
+					<div class="col-md-6">
+						As a new company, we are looking for clients and will work for a special rate.  Our only project so far is our homepage, but we are eager to take on new challenges.
+					</div>
+					<div class="col-md-6">
+						<img src="/lib/images/homepage-services.png" class="img-responsive img-thumbnail">
+					</div>
+				</div>
+			</div> <!-- jumbotron -->
+			<div class="text-center down-arrow-container"> <!-- positioned absolutely, relative to page1 -->
+				<a href="#page5" class="btn btn-default btn-circle down-arrow"><span class="fa fa-angle-double-down large"></span></a>
+			</div>
+		</div> <!-- page4 -->
+		<div class="image-spacer">
+		</div>
+		<div class="page" id="page5">
+			<div class="container page-content-smaller text-center">
+				<h2>Contact</h2>
+				<div class="desktop-spacer">
+				</div>
+				<p>Working on a project and you need a professional, responsive, and fast website?  Shoot an email to <a href="mailto:hello@leung.enterprises">hello@leung.enterprises</a> with your contact information and a brief description of your project.  We'll respond within two business days.</p>
+			</div>
+			<div class="text-center down-arrow-container"> <!-- positioned absolutely, relative to page1 -->
+				<a href="#page1" class="btn btn-default btn-circle down-arrow"><span class="fa fa-angle-double-up large"></span></a>
+			</div>
+		</div>
+		<div class="jumbotron text-center" id="footer">
+			<div class="container">
+					<small>Since 2014</small><br>
+					<small>nathan@leung.enterprises</small>
+					<h2>LE</h2>
+			</div>
+		</div>
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script> <!-- smooth scroll (CSS tricks) -->
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				  if (target.length) {
+					$('html,body').animate({
+					  scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				  }
+				}
+			  });
+			});
+		</script>
+		
+		<!-- shrinking header -->
+		<script>
+				window.addEventListener('scroll', function(e){
+					var distanceY = window.pageYOffset || document.documentElement.scrollTop;
+					var shrinkOn = 200; //0.9 * $(window).height(); /* a little less, the link to page 2 is a bit less than 100% */
+					var header = $("header").first();
+					if (distanceY > shrinkOn) {
+						header.addClass("smaller");
+					} else {
+						if (header.hasClass("smaller")) {
+							header.removeClass("smaller");
+						}
+					}
+				});
+		</script>
+	</body>
+</html>

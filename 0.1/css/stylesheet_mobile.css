@@ -1,0 +1,232 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 0;
+}
+
+body {
+	background-color: black;
+	color: white;
+	font-family: Open Sans;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%; 
+	height: 100%;
+	cursor: default;
+}
+
+h1 {
+	font-family: Open Sans;
+	font-weight: bold;
+    font-size: 30px;
+}
+p {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	color: white;
+}
+nav {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
+nav .navbar  {
+    list-style-type: none; /* no bullets */
+}
+nav .navbar li {
+	display: inline;
+	margin: 0;
+}
+
+nav .navbar li a {
+	display: inline-block;
+	width: 20%;
+	height: 30px;
+	line-height: 30px; /* height and line-height must be equal for text to be centered */
+	text-align: center;
+	text-decoration: none;
+}
+
+nav .navbar li a:visited {
+	color: black;
+}
+
+nav .navbar li a:link {
+	color: black;
+}
+
+nav .navbar li a:hover {
+	box-shadow: 0 0 2px black inset;
+}
+
+nav .navbar li:nth-child(1) a {
+	background-color: #FF0000;
+	transition: background-color 0.25s; /* when user moves mouse off */
+}
+
+nav .navbar li:nth-child(1) a:hover {
+	background-color: #A60000;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(2) a {
+	background-color: #CD0074;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(2) a:hover {
+	background-color: #85004B; 
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(3) a {
+	background-color: #FF7400;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(3) a:hover {
+	background-color: #A64B00;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(4) a {
+	background-color: #00CC00; 
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(4) a:hover {
+	background-color: #008500;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(5) a {
+	background-color: #009999;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(5) a:hover {
+	background-color: #006363;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li a .fa {
+	display: none; /* on mobile no icons (users cannot hover) */
+}
+nav .navbar li a .target {
+	font-family: Open Sans;
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	text-transform: uppercase; 
+	color: white;
+}
+
+nav .navbar li a:hover .target {
+	color: white;
+	display: block;
+}
+#brand {
+	background: white;
+	color: black;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+.brand-text {
+	line-height: 32px;
+	font-size: 24px;
+}
+
+.container {
+	margin-top: 32px;
+	margin-left: 0;
+}
+
+.content {
+	text-align: center;
+	display: inline-block;
+	height: 200px;
+}
+
+.text {
+	margin-top: 20px;
+	vertical-align: top;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.bold {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.gallery {
+	vertical-align: top;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.gallery #homepicture {
+	width: 50px; /* original width */
+    height: 50px;
+	background-image: url('/images/iphond.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+	background-position: center top; 
+	vertical-align: top;
+}
+
+.gallery #leung-enterprises-thumbnail {
+	width: 75px;
+	height: 30px;
+	background-image: url('/lib/images/leung_enterprises.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+	background-position: center top; 
+	vertical-align: top;
+	border: 1px solid white;
+}
+
+.gallery #html5logo {
+	width: 50px;
+	height: 50px;
+	background-image: url('/lib/images/html5logo.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+	background-position: center top;
+	vertical-align: top;
+}
+
+.gallery #googlelogo {
+	width: 75px;
+    height: 37px;
+	background-image: url('/lib/images/googlelogo.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+	background-position: center top; 
+	vertical-align: top;
+}
+
+#email {
+	display: inline-block;
+	font-size: 24px;
+	color: #006363;
+	font-weight: bold;
+	height: 60px;
+}
+
+#email:hover {
+	color: #009999;
+	font-weight: bold;
+}
+
+noscript {
+	text-align: center;
+	color: red;
+	font-size: 24px;
+	font-weight: bold;
+}

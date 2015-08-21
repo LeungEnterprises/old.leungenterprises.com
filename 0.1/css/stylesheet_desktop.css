@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/lib/fonts/OpenSans.woff');
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('/lib/fonts/OpenSans-Light.woff');
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('/lib/fonts/OpenSans-Semibold.woff');
+}
+
+
+/* reset to remove browser inconsistencies */
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 0;
+}
+
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Open Sans', Arial;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%; 
+	height: 100%;
+}
+
+h1 {
+	font-family: 'Open Sans', Arial;
+	font-weight: bold;
+    font-size: 40px; /* set by JS relative to button-height */
+}
+p {
+	font-family: 'Open Sans', Arial;
+	font-size: 16px; /* set by JS relative to button-height */
+	color: white;
+}
+ 
+nav {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+nav .navbar  {
+    list-style-type: none; /* no bullets */
+}
+nav .navbar li {
+	margin: 0;
+}
+
+nav .navbar li a {
+	display: inline-block;
+	/* height and width set by js, but here are placeholder values */
+	height: 120px;
+	width: 120px; /* should be small enough to fit most windows */
+	text-align: center;
+	text-decoration: none;
+	transition: box-shadow 0.25s;
+}
+
+nav .navbar li a:visited {
+	color: black;
+}
+
+nav .navbar li a:link {
+	color: black;
+}
+
+nav .navbar li a:hover {
+	box-shadow: 0 0 2px black inset;
+	transition: box-shadow 0.25s;
+}
+
+.active {
+	box-shadow: 0 0 2px black inset;
+}
+
+nav .navbar li:nth-child(1) a {
+	background-color: #FF0000;
+	transition: background-color 0.25s; /* when user moves mouse off */
+}
+
+nav .navbar li:nth-child(1) a:hover {
+	background-color: #A60000;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(1) .active {
+	background-color: #A60000 !important; /* active utility class, we need to override the ID which we use for the jQuery */
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(2) a {
+	background-color: #CD0074;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(2) a:hover {
+	background-color: #85004B; 
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(2) .active {
+	background-color: #85004B !important; 
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(3) a {
+	background-color: #FF7400;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(3) a:hover {
+	background-color: #A64B00;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(3) .active {
+	background-color: #A64B00 !important;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(4) a {
+	background-color: #00CC00; 
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(4) a:hover {
+	background-color: #008500;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(4) .active {
+	background-color: #008500 !important;
+	transition: background-color 0.25s;
+}
+
+
+nav .navbar li:nth-child(5) a {
+	background-color: #009999;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(5) a:hover {
+	background-color: #006363;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li:nth-child(5) .active {
+	background-color: #006363 !important;
+	transition: background-color 0.25s;
+}
+
+nav .navbar li a .fa {
+	font-size: 60px; /* set by JS, but placeholder value */
+	color: black;
+	line-height: 120px; /* also set by JS, so this is a placeholder */
+}
+
+nav .navbar li a:hover .fa {
+	display: none;
+}
+
+nav .navbar li .active .fa {
+	display: none;
+}
+
+nav .navbar li a .target {
+	font-family: 'Open Sans Semibold', Arial;
+	font-size: 20px; /* set by JS */
+	line-height: 120px; /* set by JS also */
+	display: none;
+	text-transform: uppercase; 
+	color: white;
+}
+
+nav .navbar li a:hover .target {
+	color: white;
+	display: block;
+}
+nav .navbar li .active .target {
+	color: white;
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.shown {
+	display: block;
+}
+
+#brand {
+	display: block;
+	color: white;
+	background-color: black;
+	font-size: 60px; /* set by JS */
+	line-height: 120px; /* line height times font size equals 100% */
+	margin-left: 460px; /* set by JS (button width).  to get the placeholder value, subtract button width (120) from placeholder width (800), divide by 2 to center, and add button width */
+	text-align: left; /* set to center with JS */
+}
+
+#leung {
+	font-family: 'Open Sans Light', Arial;
+}
+
+#enterprises {
+	font-family: 'Open Sans Semibold', Arial;
+}
+
+.container {
+	margin-left: 240px; /* set by JS, placeholder is 2x button width */
+}
+
+.content {
+	display: inline-block;
+/*  with no JS, position is default */
+/*	position: fixed; */
+}
+
+.text {
+	width: 400px; /* set by JS */
+	vertical-align: top;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.spacer{
+	width: 80px; /* set by JS */
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.gallery {
+	width: 400px; /* set by JS */
+	vertical-align: top;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.gallery #homepicture {
+	border-radius: 200px; /* to be a circle, border-radius must be the sum of 0.5 * width and padding */
+	width: 400px; /* div size, not image size (if you want it to be image size change background-size to contain */
+    	height: 400px;
+        background-size: 350px;
+	background-color: white;
+	background-image: url('/lib/images/iphone.png');
+	background-repeat: no-repeat;
+	background-position: center center; 
+	vertical-align: top;
+}
+
+.gallery #leung-enterprises-thumbnail {
+	width: 400px; /* set by JS; placeholder */
+    height: 180px; /* set by JS; placeholder */
+	background-image: url('/lib/images/leung_enterprises.png');
+	background-repeat: no-repeat;
+    	background-size: contain;
+	background-position: center top; 
+	vertical-align: top;
+	border: 1px solid white;
+}
+
+.gallery #html5logo {
+	width: 400px; /* set by JS; placeholder */
+    height: 400px; /* set by JS */
+	background-image: url('/lib/images/html5logo.png');
+	background-repeat: no-repeat;
+    background-size: 250px; /* change to a percentage later */
+	background-position: center top;
+	vertical-align: top;
+}
+
+.gallery #googlelogo {
+	width: 320px;
+    height: 110px; /* set by JS */
+	background-image: url('/lib/images/googlelogo.png');
+	background-repeat: no-repeat;
+    background-size: 250px; /* change to a percentage later */
+	background-position: center top; 
+	vertical-align: top;
+}
+
+#email {
+	font-size: 24px;
+	color: #006363;
+	font-weight: bold;
+}
+
+#email:hover {
+	color: #009999;
+	font-weight: bold;
+}

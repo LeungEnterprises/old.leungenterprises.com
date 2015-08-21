@@ -1,0 +1,169 @@
+.large{
+	font-size: 63px;
+}
+.xlarge {
+	font-size: 150px;
+}
+.xxlarge {
+	font-size: 300px;
+}
+.btn-circle {
+	border-radius: 100%;
+}
+.image-header {
+	line-height: 100%;
+	font-size: 80px;
+	color: white;
+	opacity: 0.9;
+	font-family: 'Open Sans Semibold';
+}
+.row-mobile { /* this row mobile stuff is taken straight from the .row class in Bootstrap, however it only applies to mobile devices. */
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.row-mobile:before, .row-mobile:after {
+	display: table;
+	content: " ";
+}
+.row-mobile:after {
+	clear: both;
+}
+header {
+	height: 150px;
+	line-height: 150px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: black;
+	overflow: hidden;
+	transition: all 0.3s;
+	z-index: 9999; /* always on top */
+}
+header.smaller {
+	height: 75px;
+	line-height: 75px;
+}
+header .container .col-sm-4 #logo {
+	margin-top: 40px; /* making this bigger moves the entire logo block down */
+	display: inline-block; /* need this for line-height to have an effect */
+	height: 100px;
+	line-height: 30px; /* making this bigger moves the "Enterprises" further down */
+	color: white;
+	transition: all 0.3s;
+}
+header.smaller .container .col-sm-4 #logo {
+	margin-top: 20px; /* making this bigger moves the entire logo block down */
+	display: inline-block; /* need this for line-height to have an effect */
+	height: 50px;
+	line-height: 17px; /* making this bigger moves the "Enterprises" further down */
+	color: white;
+	border: 0;
+	outline: 0;
+}
+header .container .col-sm-4 #logo #leung {
+	font-size: 70px;
+	font-family: 'Open Sans Light';
+	transition: all 0.3s;
+}
+header.smaller .container .col-sm-4 #logo #leung {
+	font-size: 35px;
+	font-family: 'Open Sans Light';
+}
+header .container .col-sm-4 #logo #enterprises {
+	font-size: 35px;
+	font-family: 'Open Sans Semibold';
+	transition: all 0.3s;
+}
+header.smaller .container .col-sm-4 #logo #enterprises {
+	font-size: 17.5px;
+	font-family: 'Open Sans Semibold';
+}
+header .container .col-sm-8 .navbar .nav li {
+	padding: 0px;
+	padding-left: 15px; /* add padding between nav links which removed below in "padding:0;" */
+}
+header .container .col-sm-8 .navbar .nav li a {
+	font-size: 18px;
+	position: relative;
+	display: inline-block; /* vertically centers the text */
+	outline: 0; /* removes the dotted outline */
+	padding: 0; /* remove padding so underline only underlines word */
+	padding-bottom: 3px;
+	color: #E6E6E6;
+	background-color: inherit; /* without this the background is the default bootstrap navbar color */
+	transition: all 0.3s
+}
+header.smaller .container .col-sm-8 .navbar .nav li a {
+	font-size: 13px;
+}
+header .container .col-sm-8 .navbar .nav li a:hover {
+	border-bottom: 2px solid white;
+}
+header .container .col-sm-8 .navbar .nav li.active a {
+	border-bottom: 2px solid white;
+}
+#page1 {
+	background-image: url('/lib/images/backgrounds/road.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#page3 .jumbotron {
+	background-color: white;
+/*	background-image: url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover; */
+}
+#page3 .jumbotron .container #resp-desc:after {
+	content: 'Utilization of the Twitter Bootstrap framework, creating mobile-first websites quickly and efficiently while still upholding relevant web standards.';
+}
+#page3 .jumbotron .container #brand-desc:after {
+	content: 'Graphics and websites for your business, establishing a clear and consistent image to build and retain a large online presence.';
+}
+#page3 .jumbotron .container #ui-desc:after {
+	content: 'User-first philosphy with specialized UI and UX development in order for you to give your users the best and most pleasant experience possible.';
+}
+ #page3 .jumbotron .container #dep-desc:after {
+	content: 'All-in-one domain registration, hosting, and SSL package to allow you to focus on building your business rather than putting up your website.';
+}
+#service-descriptions {
+	display: none;
+}
+#page5 {
+	background-image: url('/images/backgrounds/road-zoom2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.page-content {
+	padding-top: 160px; /* header height + 10px */
+}
+.page-content-smaller {
+	padding-top: 85px; /* header.smaller height + 10px */
+}
+.jumbotron {
+	color: black;
+}
+a {
+	color: #E6E6E6; /* without this the button link turns blue */
+}
+a:hover {
+	text-decoration: none;
+}
+.down-arrow {
+	display: none; /* users can just scroll on mobile */
+}
+#text-logo-holder {
+	text-align: right;
+}
+#footer-text {
+	text-align: center;
+	color: white; /* #EEEEEE; */
+}
+#footer-text:hover {
+	color: white;
+}

@@ -1,0 +1,230 @@
+.large{
+	font-size: 63px;
+}
+.xlarge {
+	font-size: 150px;
+}
+.xxlarge {
+	font-size: 300px;
+}
+.page .jumbotron {
+	background: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.9), 
+      rgba(255, 255, 255, 0.9)
+    ),
+	url('/lib/images/backgrounds/road.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.btn-circle {
+	border-radius: 25%;
+	background-color: black;
+	color: white;
+	transition: all 0.3s;
+}
+.btn-circle:hover {
+	border-radius: 50%;
+	background-color: black;
+	color: white;
+}
+.desktop-spacer {
+	height: 2em;
+}
+header {
+	height: 150px;
+	line-height: 150px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: black;
+	overflow: hidden;
+	transition: all 0.3s;
+	z-index: 9999; /* always on top */
+}
+header.smaller {
+	height: 75px;
+	line-height: 75px;
+}
+header .container .col-md-7 #logo {
+	margin-top: 40px; /* making this bigger moves the entire logo block down */
+	display: inline-block; /* need this for line-height to have an effect */
+	height: 100px;
+	line-height: 30px; /* making this bigger moves the "Enterprises" further down */
+	color: #EEEEEE;
+	transition: all 0.3s;
+}
+header .container .col-md-7 #logo:hover {
+	color: white;
+}
+header.smaller .container .col-md-7 #logo {
+	margin-top: 20px; /* making this bigger moves the entire logo block down */
+	display: inline-block; /* need this for line-height to have an effect */
+	height: 50px;
+	line-height: 17px; /* making this bigger moves the "Enterprises" further down */
+	border: 0;
+	outline: 0;
+}
+header .container .col-md-7 #logo #leung {
+	font-size: 70px;
+	font-family: 'Open Sans Light';
+	transition: all 0.3s;
+}
+header.smaller .container .col-md-7 #logo #leung {
+	font-size: 35px;
+	font-family: 'Open Sans Light';
+}
+header .container .col-md-7 #logo #enterprises {
+	font-size: 35px;
+	font-family: 'Open Sans Semibold';
+	transition: all 0.3s;
+}
+header.smaller .container .col-md-7 #logo #enterprises {
+	font-size: 17.5px;
+	font-family: 'Open Sans Semibold';
+}
+header .container #nav-container {
+	text-align: right;
+}
+header .container .col-md-5 .navbar .nav li {
+	padding: 0px;
+	padding-left: 30px; /* add padding between nav links which removed below in "padding:0;" */
+}
+header .container .col-md-5 .navbar .nav li a {
+	font-size: 18px;
+	position: relative;
+	display: inline-block; /* vertically centers the text */
+	outline: 0; /* removes the dotted outline */
+	padding: 0; /* remove padding so underline only underlines word */
+	padding-bottom: 3px;
+	color: #E6E6E6;
+	background-color: inherit; /* without this the background is the default bootstrap navbar color */
+	transition: all 0.3s
+}
+header.smaller .container .col-md-5 .navbar .nav li a {
+	font-size: 13px;
+}
+header .container .col-md-5 .navbar .nav li a:after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	margin-top: 3px;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width 0.3s, background-color 0.3s;
+}
+header .container .col-md-5 .navbar .nav li a:hover:after {
+	width: 100%;
+	background: white;
+}
+header .container .col-md-5 .navbar .nav li.active a:after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	margin-top: 3px;
+	height: 1px;
+	width: 100%;
+	background: white;
+	transition: initial;
+}
+.image-spacer {
+	height: 10%;
+	background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+    ),
+	url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#page1 {
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+    ),
+	url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+}
+#page2 .jumbotron {
+	background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+    ),
+	url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+}
+#page3 .jumbotron {
+	background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+    ),
+	url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+}
+#page4 .jumbotron {
+	background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+    ),
+	url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+}
+#page5 {
+	background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+    ),
+	url('/lib/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+}
+.page-content {
+	padding-top: 175px; /* header height + 25px */
+}
+.page-content-smaller {
+	padding-top: 100px; /* header.smaller height + 25px */
+}
+.jumbotron {
+	color: black;
+}
+.down-arrow-container {
+	width: 100%;
+	position: absolute;
+	bottom: 5%;
+}
+.down-arrow {
+	margin: 0 auto;
+	outline: 0;
+	height: 73px;
+	width: 73px;
+}

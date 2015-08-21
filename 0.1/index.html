@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset='UTF-8' /> 
+		<meta name='viewport' content='width=device-width, user-scalable=no' />
+        <meta name='description' content='Web design by Leung Enterprises.' />
+		
+		<link rel='stylesheet' media="screen and (max-width: 768px)" href='./css/stylesheet_mobile.css' />
+		
+		<link rel='stylesheet' media="screen and (min-width: 769px)" href='./css/stylesheet_desktop.css' /> <!-- for testing -->
+		
+		<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' />
+		
+        <title>Leung Enterprises</title>
+    </head>
+    <body>
+		<script>
+			desktopStylesheet = document.createElement( "link" );
+			desktopStylesheet.href = './css/stylesheet_desktop.css'
+			desktopStylesheet.type = "text/css";
+			desktopStylesheet.rel = "stylesheet";
+			desktopStylesheet.media = "screen and (min-width: 769px)";
+			
+			document.head.appendChild(desktopStylesheet);
+		</script>
+<!--		<noscript>
+			<link rel='stylesheet' media="screen and (max-width: 768px)" href='./css/stylesheet_mobile.css' />
+			<!-- mobile css for js disabled users -->
+<!--		</noscript> -->
+		<nav>
+			<ul class='navbar'>
+				<li>
+					<a href='#home' id='home-button'>
+						<span class='fa fa-home'></span>
+						<span class='target'>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href='#work' id='work-button'>
+						<span class='fa fa-folder-o'></span>
+						<span class='target'>Work</span>
+					</a>
+				</li>
+				<li>
+					<a href='#about' id='about-button'>
+						<span class='fa fa-user'></span>
+						<span class='target'>About</span>
+					</a>
+				</li>
+				<li>
+					<a href='#services' id='services-button'>
+						<span class='fa fa-question-circle'></span>
+						<span class='target'>Services</span>
+					</a>
+				</li>
+				<li>
+					<a href='#contact' id='contact-button'>
+						<span class='fa fa-envelope-o'></span>
+						<span class='target'>Contact</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div id='brand'>
+			<h1 class='brand-text'><span id="leung">LEUNG</span> <span id="enterprises">ENTERPRISES</span></h1>
+		</div>
+		<div class='container'>
+			<div id='home' class='content'>
+				<div class="text">
+					<p><span class="bold">LEUNG ENTERPRISES:</span> a web development company based in Southeastern Pennsylvania, creating amazing websites using the latest technologies.</p>
+				</div>
+				<div class="gallery">
+					<div id="homepicture">
+					</div>
+				</div>
+			</div>
+			<div id='work' class='content'>
+				<div class="text">
+					<p>As a new company, we are looking for clients and will work at a special rate.</p>
+				</div>
+				<div class="spacer">
+				</div>
+				<div class="gallery">
+					<div id="leung-enterprises-thumbnail">
+					</div>
+					<br>
+					<br>
+					<p>Time: 32 hours</p>
+				</div>
+			</div>
+			<div id='about' class='content'>
+				<div class='text'>
+					<p>We have three years of HTML5/CSS3 experience as well as foundations in jQuery, JavaScript, and PHP for both client- and server-side scripting.</p>
+				</div>
+				<div class="gallery">
+					<div id="html5logo">
+					</div>
+				</div>
+			</div>
+			<div id='services' class='content'>
+				<div class="text">
+					<p>We make websites optimized for both performance and aesthetics, allowing for a smooth and enjoyable user experience as well as a higher rank on search engine results. Our skill set includes HTML, CSS, JS, jQuery, and PHP. Request a quote today.</p>
+				</div>
+				<div class="gallery">
+					<div id="googlelogo">
+					</div>
+				</div>
+			</div>
+			<div id='contact' class='content'>
+				<div class="text">
+					<p>Please email us with your full name and a short description of your project, as well as a timeframe and budget.  We'd appreciate it if you put "Web Development" in the subject line.  A response will be sent within two business days.</p>
+				</div>
+				<div class="gallery">
+					<a href='mailto:hello@leung.enterprises?subject=Web Development' id="email">hello@leung.enterprises</a>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<noscript>
+			<p>Enable Javascript for a more enjoyable experience.</p>
+		</noscript>
+		<script src='//code.jquery.com/jquery-2.1.1.min.js'></script>
+		<!-- jQuery UI for effects -->
+		<script src='//code.jquery.com/ui/1.11.1/jquery-ui.min.js'></script>
+		<script>
+			function responsiveElements() {
+			
+					var width =  $(window).innerWidth();
+					var height = $(window).innerHeight();
+					
+					// height is 1/5 of page, width is set by height
+					var button = $('nav .navbar li a');
+					var buttonHeight = (height / 5);
+
+					button.css('height', buttonHeight);
+					button.css('width', buttonHeight);
+					
+					var h1 = $('h1');
+					h1.css('font-size', buttonHeight / 4);
+					
+					var p = $('p');
+					p.css('font-size', buttonHeight / 9);					
+					
+					var brandText = $('.brand-text');
+					brandText.css('font-size', buttonHeight / 2);
+					
+					//header spans entire page
+					var header = $('#header');
+					header.css('width', width);
+					
+					// make font size 50% of button, line height 200%
+					var faFont = $('nav .navbar li a .fa');
+					faFont.css('font-size', buttonHeight / 2);
+					faFont.css('line-height', '200%');
+					
+					var targetFont = $('nav .navbar li a .target');
+					targetFont.css('font-size', buttonHeight / 7);
+					targetFont.css('line-height', '700%');			
+					
+					var container = $('.container');
+					var fifteenPercentWidth = (width / 100) * 15;
+					containerMarginLeft = buttonHeight + fifteenPercentWidth;
+					container.css('margin-left', containerMarginLeft);
+					container.css('margin-right', fifteenPercentWidth);
+					
+					var content = $('.content');
+					content.css('position', 'fixed');
+				
+					var brand = $('#brand');
+					brand.css('height', buttonHeight);
+					brand.css('margin-left', buttonHeight);
+					brand.css('text-align', 'center'); // in no JS version, we align it left and move it with margin-left
+					brand.css('font-size', buttonHeight / 5);
+					
+					var galleryWidth = (($('.container').width() / 100) * 45);
+					$('.gallery').css('width', galleryWidth);
+					$('.text').css('width', galleryWidth);
+					
+					var spacerWidth = (($('.container').width() / 100) * 10);
+					$('.spacer').css('width', spacerWidth);
+					$('.spacer').css('height', 0); // spacer height needs to be a number so then elements are spaced apart when a user does not use JS
+					
+					// screenshot is 1598 by 735
+					var leungEnterprisesImage = $('#leung-enterprises-thumbnail');
+					imgHeight = (galleryWidth / 1598) * 735;
+					leungEnterprisesImage.css('width', '100%');
+					leungEnterprisesImage.css('height', imgHeight);
+					
+					// html5 logo is square
+					var html5 = $('#html5logo');
+					html5.css('width', '100%');
+					html5.css('height', galleryWidth);
+					
+					var google = $('#googlelogo');
+					var googleHeight = ((galleryWidth / 640) * 220) * 0.9; // Google logo is too big, so we can scale it down a bit
+					google.css('width', '100%');
+					google.css('height', googleHeight);
+				}
+				
+				setInterval(responsiveElements, 250); // we want to check page width and adjust every quarter second
+		
+				responsiveElements();
+
+				 // show only one div at a time
+				 $( document ).ready(function() {
+				  $('#home').show();
+					  $('#home-button').addClass('active');
+					  $('nav .navbar li:nth-child(1) a .fa').removeClass('shown').addClass('hidden');
+					  $('nav .navbar li:nth-child(1) a .target').removeClass('hidden').addClass('shown');
+				  $('#work').hide();
+					  $('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+				  $('#about').hide();
+					  $('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');
+				  $('#services').hide();
+					  $('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+				  $('#contact').hide();
+					  $('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');		  
+				});
+				$('#home-button').click(function(){
+				  $('#home').show("fade");
+					  $('#home-button').addClass('active');
+					  $('nav .navbar li:nth-child(1) a .fa').removeClass('shown').addClass('hidden');
+					  $('nav .navbar li:nth-child(1) a .target').removeClass('hidden').addClass('shown');
+				  $('#work').hide("fade");
+					  $('#work-button').removeClass('active');
+					  $('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+					  $('#work-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#about').hide("fade");
+					  $('#about-button').removeClass('active');	  
+					  $('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');	 
+					  $('#about-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);					  
+				  $('#services').hide("fade");		  
+					  $('#services-button').removeClass('active');  
+					  $('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');		  
+					  $('#services-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#contact').hide("fade");  
+					  $('#contact-button').removeClass('active');	  
+					  $('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');		
+					  $('#contact-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);
+				});				
+				$('#work-button').click(function(){
+				  $('#home').hide("fade");
+					  $('#home-button').removeClass('active');
+					  $('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+					  $('#home-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#work').show("fade");
+					  $('#work-button').addClass('active');
+					  $('nav .navbar li:nth-child(2) a .fa').removeClass('shown').addClass('hidden');
+					  $('nav .navbar li:nth-child(2) a .target').removeClass('hidden').addClass('shown');
+				  $('#about').hide("fade");
+					  $('#about-button').removeClass('active');  
+					  $('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');
+					  $('#about-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);				  
+				  $('#services').hide("fade");
+					  $('#services-button').removeClass('active'); 		  
+					  $('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');	
+					  $('#services-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);		  		  
+				  $('#contact').hide("fade");
+					  $('#contact-button').removeClass('active');   
+					  $('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+					  $('#contact-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);
+				});
+				$('#about-button').click(function(){
+				  $('#home').hide("fade");
+					  $('#home-button').removeClass('active'); 
+					  $('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+					  $('#home-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#work').hide("fade");
+					  $('#work-button').removeClass('active'); 
+					  $('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+					  $('#work-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#about').show("fade");
+					  $('#about-button').addClass('active');   
+					  $('nav .navbar li:nth-child(3) a .fa').removeClass('shown').addClass('hidden');
+					  $('nav .navbar li:nth-child(3) a .target').removeClass('hidden').addClass('shown');
+				  $('#services').hide("fade");
+					  $('#services-button').removeClass('active');  
+					  $('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+					  $('#services-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#contact').hide("fade");
+					  $('#contact-button').removeClass('active'); 		  
+					  $('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+					  $('#contact-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);
+				});				
+				$('#services-button').click(function(){
+				  $('#home').hide("fade");
+					  $('#home-button').removeClass('active'); 
+					  $('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+					  $('#home-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#work').hide("fade");
+					  $('#work-button').removeClass('active'); 
+					  $('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+					  $('#work-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#about').hide("fade");
+					  $('#about-button').removeClass('active'); 	  
+					  $('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');	
+					  $('#about-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);					  
+				  $('#services').show("fade");
+					  $('#services-button').addClass('active'); 		  
+					  $('nav .navbar li:nth-child(4) a .fa').removeClass('shown').addClass('hidden');
+					  $('nav .navbar li:nth-child(4) a .target').removeClass('hidden').addClass('shown');			  
+				  $('#contact').hide("fade");
+					  $('#contact-button').removeClass('active'); 		  
+					  $('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+					  $('#contact-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(5) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(5) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+					});				
+				$('#contact-button').click(function(){
+				  $('#home').hide("fade");
+					  $('#home-button').removeClass('active'); 
+					  $('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+					  $('#home-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(1) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(1) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);	
+				  $('#work').hide("fade");
+					  $('#work-button').removeClass('active'); 
+					  $('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+					  $('#work-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(2) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(2) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);
+				  $('#about').hide("fade");
+					  $('#about-button').removeClass('active'); 	  
+					  $('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');	
+					  $('#about-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(3) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(3) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);					  
+				  $('#services').hide("fade");
+					  $('#services-button').removeClass('active');   
+					  $('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+					  $('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+					  $('#services-button').hover(
+							function() {
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .target').removeClass('hidden').addClass('shown');
+								}, function() {
+								$('nav .navbar li:nth-child(4) a .target').removeClass('shown').addClass('hidden');
+								$('nav .navbar li:nth-child(4) a .fa').removeClass('hidden').addClass('shown');
+							}
+						);				  
+				  $('#contact').show("fade");
+					  $('#contact-button').addClass('active');   
+					  $('nav .navbar li:nth-child(5) a .fa').removeClass('shown').addClass('hidden');
+					  $('nav .navbar li:nth-child(5) a .target').removeClass('hidden').addClass('shown');  
+				});
+		</script>
+    </body>
+</html>

@@ -1,0 +1,309 @@
+/* first define fonts */
+@font-face {
+	font-family: 'Open Sans';
+	src: url('./fonts/OpenSans.woff');
+}
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('./fonts/OpenSans-Light.woff');
+}
+@font-face {
+	font-family: 'Open Sans Semibold';
+	src: url('./fonts/OpenSans-Semibold.woff');
+}
+			
+/* begin styles */
+html , body{
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+body {
+	font-family: 'Open Sans Light', Arial;
+	margin: 0;
+	position: relative; /* for scrollspy */
+}
+hr {
+	height: 1px;
+	border: 0;
+	box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.5);
+}
+.col-md-1p5 { /* 1 point 5 */
+	width: 12.5%;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/* .navbar */
+.navbar.larger {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	border: 0;
+	background: transparent;
+	min-height: 150px; /* min-height to min-height transition */
+}
+.navbar {
+	width: 100%;
+	min-height: 50px; /* this is the default, it's needed for the transition to work */
+	transition: all 0.3s;
+}
+.navbar-default {
+	background: black;
+}
+.navbar.larger .container .navbar-header .navbar-brand {
+	outline: 0;
+}
+.navbar.larger .container .navbar-header .navbar-brand #logo {
+	margin-top: 20px; /* move the logo further down */
+	line-height: 30px; /* separate the enterprises from the leung */
+	display: inline-block; /* need this for line-height to have an effect */
+}
+.navbar.larger .container .navbar-header .navbar-brand #logo:hover {
+	text-shadow: 0px 0px 5px #eee;
+}
+.navbar .container .navbar-header .navbar-brand #logo {
+	margin-top: -10px; /* making this smaller moves the entire logo block up */
+	line-height: 18px; /* separate the enterprises from the leung */
+	display: inline-block; /* need this for line-height to have an effect */
+	transition: all 0.3s;
+}
+.navbar.larger .container .navbar-header .navbar-brand #logo #leung {
+	font-size: 70px;
+	font-family: 'Open Sans Light';
+}
+.navbar .container .navbar-header .navbar-brand #logo #leung {
+	font-size: 35px;
+	font-family: 'Open Sans Light';
+	transition: all 0.3s;
+}
+.navbar.larger .container .navbar-header .navbar-brand #logo #enterprises {
+	font-size: 35px;
+	font-family: 'Open Sans Semibold';
+}
+.navbar .container .navbar-header .navbar-brand #logo #enterprises {
+	font-size: 17.5px;
+	font-family: 'Open Sans Semibold';
+	transition: all 0.3s;
+}
+.navbar .container .navbar-collapse .navbar-nav {
+	transition: all 0.3s;
+}
+.navbar.larger .container .navbar-collapse .navbar-nav {
+	padding-top: 40px;
+}
+.navbar .container .navbar-collapse .navbar-nav > li {
+	padding: 0px;
+	padding-right: 30px; /* add padding between nav links */
+	transition: all 0.3s;
+}
+.navbar .container .navbar-collapse .navbar-nav li a {
+	outline: 0;
+}
+.navbar.larger .container .navbar-collapse .navbar-nav li a {
+	font-size: 18px;
+}
+.navbar .container .navbar-collapse .navbar-nav li a {
+	font-size: 13px;
+	padding-left: 0; /* remove padding so underline only underlines word */
+	padding-right: 0; /* remove padding so underline only underlines word */
+	padding-bottom: 3px;
+	color: #E6E6E6;
+	transition: all 0.3s;
+}
+.navbar .container .navbar-collapse .navbar-nav > li > a {
+	background: inherit; /* without this the background is the default bootstrap navbar color */
+}
+@media (min-width: 768px) {
+	.navbar .container .navbar-collapse .navbar-nav > li > a:after {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		margin-top: 3px;
+		height: 1px;
+		width: 0px;
+		background: transparent;
+		transition: width 0.3s, background-color 0.3s;
+	}
+	.navbar .container .navbar-collapse .navbar-nav > li > a:hover:after {
+		width: 100%;
+		background: white;
+	}
+	.navbar .container .navbar-collapse .navbar-nav > li.active > a:after {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		margin-top: 3px;
+		height: 1px;
+		width: 100%;
+		background: white;
+		transition: all 0.3s;
+	}
+}
+
+@media (max-width: 767px) {   
+	.navbar .container .navbar-collapse ul li.active {
+	    background-color: #333;
+	}
+	ul.dropdown-menu {
+		text-align: center;
+	}
+}
+@media (min-width: 768px) {  
+	ul.nav li.dropdown:hover > ul.dropdown-menu {
+	    display: block;    
+	}
+	
+	ul.dropdown-menu {
+	    background-color: #333;
+	    text-align: center;
+	    border: 0;
+	}
+	ul.dropdown-menu li {
+	    padding: 0px;
+	}
+	ul.dropdown-menu li a:hover {
+	    background-color: #888;
+	}
+}
+
+/* font sizes */
+.jumbotron .container h1 {
+	font-size: 44px;
+}
+.fa-lg {
+	font-size: 168px;
+	line-height: 168px; /* height of the .row div */
+}
+.fa-sm {
+	font-size: 100px;
+}
+@media (max-width: 767px) {
+	.jumbotron .container h1 {
+		font-size: 32px;
+	}
+	.jumbotron .container p {
+		font-size: 16px;
+	}
+	.fa {
+		display: none;
+	}
+        #iphone {
+                display: none;
+        }
+}
+
+/* layout css */
+.jumbotron {
+	margin-bottom: 0; /* bootstrap adds 30px of margin-bottom */
+	position: relative; /* for .down-arrow */
+}
+	/* specific pages */
+	#page1 {
+		min-height: 75%;
+		padding-top: 175px; /* navbar.larger height is 150px, add the 25 so there's more spacing*/
+		color: white;
+		text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+		background-color: dimgray;
+		background: 
+		linear-gradient(
+			rgba(32, 32, 32, 0.3),
+			rgba(32, 32, 32, 0.3)
+		),
+		url('//i.imgur.com/SvLiuZs.jpg'); /* optimized philly night */
+		background-position: top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	@media (max-width: 767px) {
+		#page1 {
+			padding-top: 75px;
+		}
+	}
+	#page2 {
+		background: white;
+		min-height: 100%;
+	}
+	#page3 {
+		background-color: dimgray;
+		background: 
+		linear-gradient(
+			rgba(32, 32, 32, 0.3),
+			rgba(32, 32, 32, 0.3)
+		),
+		url('//i.imgur.com/SvLiuZs.jpg');
+		background-position: top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		min-height: 100%;
+	}
+		#page3 .container .col-md-12{
+			color: white;
+		}
+		#page3 .container .row .col-md-3 {
+			padding: 15px;
+			box-shadow: black 0px 0px 10px;
+		}
+		@media (max-width: 767px) {
+			#page3 .container .row .col-md-3 {
+				margin-bottom: 30px;
+			}
+		}
+	#page4 {
+		background: white;
+		min-height: 70%;
+	}
+        .client {
+          background: rgba(0,0,0,0.45);
+          padding: 15px;
+        }
+	#page5 {
+		background-color: dimgray;
+		background: 
+		linear-gradient(
+			rgba(32, 32, 32, 0.3),
+			rgba(32, 32, 32, 0.3)
+		),
+		url('//i.imgur.com/SvLiuZs.jpg');
+		background-position: top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		color: white;
+		min-height: 30%;
+	}
+	#page6 {
+		background: white; /* #222222 is the gray for the philly pic, this is the color of btn-primary */
+		min-height: 70%;
+	}
+	#footer {
+		color: white;
+		background: black;
+		padding-top: 75px; /* navbar.smaller plus 25px */
+		min-height: 30%;
+	}
+	
+	
+/* btn */
+.btn-lg {
+  border-radius: 0;
+  transition: all 0.3s;
+}
+.btn-lg:hover {
+	text-decoration: none;
+}
+
+/* images */
+.img-portfolio {
+  -webkit-filter: grayscale(50%);
+  -moz-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
+.img-portfolio:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}

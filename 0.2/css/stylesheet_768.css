@@ -1,0 +1,210 @@
+.page {
+	height: auto;
+	min-height: 100%;
+	position: relative; /* for down arrow */
+}
+.large{
+	font-size: 36px;
+}
+.xlarge {
+	font-size: 36px;
+}
+.xxlarge {
+	font-size: 216px;
+}
+.btn-circle {
+	border-radius: 100%;
+}
+.image-header {
+	line-height: 100%;
+	font-size: 36px;
+	color: white;
+	opacity: 0.9;
+	font-family: 'Open Sans Semibold';
+}
+.fa {
+	display: none; /* no font awesome on mobile */
+}
+.row-mobile {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.row-mobile:before, .row-mobile:after {
+	display: table;
+	content: " ";
+}
+.row-mobile:after {
+	clear: both;
+}
+header {
+	height: 120px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: black;
+	overflow: hidden;
+	transition: all 0.3s;
+	z-index: 9999; /* always on top */
+}
+header.smaller {
+	height: 80px;
+}
+header .container #logo-container {
+	text-align: center;
+}
+header .container .col-xs-12 #logo {
+	margin-top: 20px; /* making this bigger moves the entire logo block down */
+	display: inline-block; /* need this for line-height to have an effect */
+	line-height: 20px; /* making this bigger moves the "Enterprises" further down */
+	color: white;
+	transition: all 0.3s;
+}
+header.smaller .container .col-xs-12 #logo {
+	line-height: 10px; /* making this bigger moves the "Enterprises" further down */
+}
+header .container .col-xs-12 #logo #leung {
+	font-size: 35px;
+	font-family: 'Open Sans Light';
+	transition: all 0.3s;
+}
+header .container .col-xs-12 #logo #enterprises {
+	font-size: 18px;
+	font-family: 'Open Sans Semibold';
+	transition: all 0.3s;
+}
+header.smaller .container .col-xs-12 #logo #leung {
+	font-size: 14px;
+}
+header.smaller .container .col-xs-12 #logo #enterprises {
+	font-size: 7px;
+	font-family: 'Open Sans Semibold';
+	transition: all 0.3s;
+}
+header .container #nav-container {
+	margin-left: -15px; /* we added padding-left below */
+	text-align: center;
+}
+header.smaller .container #nav-container {
+	margin-top: -5px;
+}
+header .container #nav-container .navbar .nav li {
+	display: inline;
+	padding: 0px;
+	padding-left: 15px; /* add padding between nav links which removed below in "padding:0;" */
+}
+header .container #nav-container .navbar .nav li a {
+	font-size: 13px;
+	position: relative;
+	display: inline-block; /* vertically centers the text */
+	outline: 0; /* removes the dotted outline */
+	padding: 0; /* remove padding so underline only underlines word */
+	border-bottom: 1px dotted white;
+	color: #E6E6E6;
+	background-color: inherit; /* without this the background is the default bootstrap navbar color */
+	transition: all 0.3s
+}
+header.smaller .container #nav-container .navbar .nav li a {
+	line-height: 13px;
+	font-size: 13px;
+	padding-bottom: 3px;
+	border-bottom: 1px dotted white;
+}
+header .container #nav-container .navbar .nav li a:hover {
+	border-bottom: 2px solid white;
+}
+header .container #nav-container .navbar .nav li.active a {
+	border-bottom: 2px solid white;
+}
+#page1 {
+	background-image: url('/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#page2 .jumbotron {
+	background-image: url('/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#page2 .jumbotron .container #about-nathan:after {
+	content: 'I\'m a web designer based in Southeastern Pennsylvania who can develop your amazing website.  Send me an email.';
+}
+#page2 .jumbotron .container #about-tech:after {
+	content: "I have experience with: HTML5 and CSS3; Javascript and jQuery; and PHP/SQL databases."
+}
+#about-fulltext {
+	display: none;
+}
+#page3 .jumbotron {
+	background-image: url('/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#page3 .jumbotron .container #resp-desc:after {
+	content: 'Utilization of the Twitter Bootstrap framework, creating mobile-first websites quickly and efficiently while still upholding relevant web standards.';
+}
+#page3 .jumbotron .container #brand-desc:after {
+	content: 'Graphics and websites for your business, establishing a clear and consistent image to build and retain a large online presence.';
+}
+#page3 .jumbotron .container #ui-desc:after {
+	content: 'User-first philosphy with specialized UI and UX development in order for you to give your users the best and most pleasant experience possible.';
+}
+#page3 .jumbotron .container #dep-desc:after {
+	content: 'All-in-one domain registration, hosting, and SSL package to allow you to focus on building your business rather than putting up your website.';
+}
+#service-descriptions {
+	display: none;
+}
+#page4 .jumbotron {
+	background-image: url('/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#page4 .jumbotron .container #work-text:after {
+	content: 'As a new company, we are looking for clients and will work for a special rate.';
+}
+#work-text {
+	display: none;
+}
+#page5 {
+	background-image: url('/images/backgrounds/lake.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.page-content {
+	padding-top: 130px; /* header height + 10px */
+}
+.page-content-smaller {
+	padding-top: 90px; /* header.smaller height + 10px */
+}
+.jumbotron {
+	color: black;
+}
+a {
+	color: #E6E6E6; /* without this the button link turns blue */
+}
+a:hover {
+	text-decoration: none;
+}
+.down-arrow {
+	display: none; /* users can just scroll on mobile */
+}
+#text-logo-holder {
+	text-align: right;
+}
+#footer-text {
+	text-align: center;
+	color: white; /* #EEEEEE; */
+}
+#footer-text:hover {
+	color: white;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Old Versions - Leung Enterprises</title>
+    <meta name="description" content="See the evolution of Leung Enterprises from their very first website to now.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:400,300">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <style>
+      body {
+        font-family: 'Open Sans';
+        font-weight: 300 !important;
+      }
+      .text-light {
+        font-weight: 300 !important;
+      }
+      .flex-center {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .jumbotron {
+        color: #eee;
+        min-height: 100vh;
+        margin-bottom: 0;
+        background: rgba(0,0,0,0.4);
+        animation: rainbowBg 30s infinite;
+        animation-timing-function: linear;
+      }
+      .jumbotron::before {
+        content: '';
+        display: block;
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url('//i.imgur.com/v2flBAW.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        animation: pan 120s infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes pan {
+        0%, 100% {
+          background-position: bottom center;
+        }
+        50% {
+          background-position: top center;
+        }
+      }
+      @keyframes rainbowBg {
+        0%, 100% {
+          background: hsla(0, 100%, 50%, 0.4);
+        }
+        17% {
+          background: hsla(60, 100%, 50%, 0.4);
+        }
+        33% {
+          background: hsla(120, 100%, 20%, 0.4);
+        }
+        50% {
+          background: hsla(180, 100%, 20%, 0.4);
+        }
+        67% {
+          background: hsla(240, 100%, 50%, 0.4);
+        }
+        83% {
+          background: hsla(300, 100%, 50%, 0.4);
+        }
+      }
+      #header {
+        font-weight: 600;
+        font-size: 10rem;
+        animation: textShadows 1s infinite;
+        animation-timing-function: linear;
+      }
+      #description {
+        font-size: 3rem;
+        font-weight: 600;
+        animation: rainbowText 1s infinite;
+        animation-timing-function: linear;
+        text-shadow: 0px 0px 10px black;
+      }
+      @keyframes textShadows {
+        0%, 30%, 70%, 100% {
+          text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+        }
+        50% {
+          text-shadow: -10px 10px 0px #00e6e6,
+                 -20px 20px 0px #01cccc,
+                 -30px 30px 0px #00bdbd;
+        }
+      }
+      @keyframes rainbowText {
+        0%, 100% {
+          color: hsla(0, 100%, 85%, 0.85);
+        }
+        17% {
+          color: hsla(60, 100%, 85%, 0.85);
+        }
+        33% {
+          color: hsla(120, 100%, 85%, 0.85);
+        }
+        50% {
+          color: hsla(180, 100%, 85%, 0.85);
+        }
+        67% {
+          color: hsla(240, 100%, 85%, 0.85);
+        }
+        83% {
+          color: hsla(300, 100%, 85%, 0.85);
+        }
+      }
+      .nav-oldversion {
+        padding: 0;
+        float: none;
+        list-style-type: none;
+      }
+      .nav-oldversion > li {
+        display: inline-block;
+      }
+      .nav-oldversion > li > a {
+        border-radius: 0;
+        padding: 15px;
+        margin-right: 5px;
+        font-weight: 300;
+      }
+      .nav-oldversion > li > a:hover {
+        text-decoration: none;
+      }
+      .logo {
+        font-weight: 300;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+      .leung {
+        font-size: 48px;
+      }
+      .enterprises {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body id='body'>
+    <div class='jumbotron flex-center text-center'>
+      <div class='container'>
+        <h1 id='header'>Old Versions</h1>
+        <p id="description">of the Leung Enterprises Home Page</p>
+        <br>
+        <div>
+          <ul class='nav-oldversion'>
+            <li><a class='btn btn-warning' href='./0.1'>v0.1.0</a></li>
+            <li><a class='btn btn-warning' href='./0.2'>v0.2.0</a></li>
+            <li><a class='btn btn-info' href='./1.0'>v1.0</a></li>
+            <li><a class='btn btn-info' href='./1.1'>v1.1</a></li>
+            <br>
+            <br>
+            <li><a class='btn btn-primary' href='./2.0'>
+              v2.0 <span class="small">(current)</span>
+            </a></li>
+            <br>
+            <br>
+            <li><a class='btn btn-success' href='./3.0-beta'>
+              v3.0 <span class="small">(beta)</span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      function addLogo() {
+        var time = new Date().getTime();
+        var id = "logo-" + time;
+        var x = event.clientX;
+        var y = event.clientY;
+        var logo = document.createElement('div');
+        logo.className = "logo";
+        logo.id = id;
+        logo.style.top = y + 'px';
+        logo.style.left = x + 'px';
+        logo.style.display = 'block';
+        logo.style.zIndex = '1';
+        logo.style.visibility = 'visible';
+        var leung = document.createElement('span');
+        leung.className = "leung";
+        var leungText = document.createTextNode('Leung');
+        leung.appendChild(leungText);
+        var enterprises = document.createElement('span');
+        enterprises.className = "enterprises";
+        var enterprisesText = document.createTextNode("Enterprises");
+        enterprises.appendChild(enterprisesText);
+        var br = document.createElement('br');
+        logo.appendChild(leung);
+        logo.appendChild(br);
+        logo.appendChild(enterprises);
+        var body = document.getElementById('body');
+        body.appendChild(logo);
+        var width = logo.offsetWidth;
+        var height = logo.offsetHeight;
+      }
+      body.onclick = addLogo;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+.btn,body,body h1,body h2,body h3,body h4,body h5,body h6,body p,html,html h1,html h2,html h3,html h4,html h5,html h6,html p {
+  font-weight:300
+}
+
+#landing #particles-js>.particles-js-canvas-el,#sidebar-overlay,#work .jumbotron {
+  min-height:100vh
+}
+
+body,html {
+  position:relative;
+  color:#eee;
+  font-family:Open Sans
+}
+
+.full-screen-page {
+  min-height:100vh;
+  min-width:100%
+}
+
+.btn {
+  border-radius:0
+}
+
+.btn-hollow,.btn-hollow:active,.btn-hollow:focus {
+  font-weight:300;
+  border:1px solid #eee;
+  color:#eee;
+  min-width:170px;
+  -webkit-transition:all .3s;
+  transition:all .3s
+}
+
+.btn-hollow:hover {
+  font-weight:400;
+  color:#111;
+  background:#eee
+}
+
+.navbar-inverse {
+  background:0 0;
+  border-bottom:0;
+  padding-bottom:30px;
+  -webkit-transition:background .3s;
+  transition:background .3s
+}
+
+.navbar-inverse.scrolled {
+  background:#000
+}
+
+.navbar-inverse.scrolled .navbar-header .navbar-brand {
+  opacity:1
+}
+
+.navbar-inverse .navbar-header {
+  float:none
+}
+
+.navbar-inverse .navbar-header .navbar-toggle {
+  position:relative;
+  top:15px;
+  display:block;
+  border:0;
+  border-radius:0
+}
+
+.navbar-inverse .navbar-header .navbar-toggle .icon-bar {
+  -webkit-transition:all .3s;
+  transition:all .3s
+}
+
+.navbar-inverse .navbar-header .navbar-toggle:active,.navbar-inverse .navbar-header .navbar-toggle:focus,.navbar-inverse .navbar-header .navbar-toggle:hover {
+  background:0 0
+}
+
+.navbar-inverse .navbar-header .navbar-toggle:active .icon-bar:nth-child(1),.navbar-inverse .navbar-header .navbar-toggle:focus .icon-bar:nth-child(1),.navbar-inverse .navbar-header .navbar-toggle:hover .icon-bar:nth-child(1) {
+  -webkit-transform:rotate(-30deg);
+  -ms-transform:rotate(-30deg);
+  transform:rotate(-30deg)
+}
+
+.navbar-inverse .navbar-header .navbar-toggle:active .icon-bar:nth-child(2),.navbar-inverse .navbar-header .navbar-toggle:focus .icon-bar:nth-child(2),.navbar-inverse .navbar-header .navbar-toggle:hover .icon-bar:nth-child(2) {
+  opacity:0
+}
+
+.navbar-inverse .navbar-header .navbar-toggle:active .icon-bar:nth-child(3),.navbar-inverse .navbar-header .navbar-toggle:focus .icon-bar:nth-child(3),.navbar-inverse .navbar-header .navbar-toggle:hover .icon-bar:nth-child(3) {
+  -webkit-transform:rotate(30deg);
+  -ms-transform:rotate(30deg);
+  transform:rotate(30deg)
+}
+
+.navbar-inverse .navbar-header .navbar-brand {
+  margin-left:15px;
+  font-weight:400;
+  font-size:28px;
+  line-height:50px;
+  color:#eee;
+  opacity:0;
+  -webkit-transition:opacity .3s;
+  transition:opacity .3s
+}
+
+@media screen and (max-width:767px) {
+.navbar-inverse .navbar-header .navbar-brand {
+  display:block
+}
+
+.navbar-inverse .navbar-header .navbar-brand:not(:first-letter) {
+  color:red
+}
+}
+
+.navbar-inverse #navbar-content>.nav {
+  padding-top:20px;
+  position:fixed;
+  top:0;
+  right:0;
+  text-align:center;
+  width:225px;
+  height:100vh;
+  margin-right:-225px;
+  background:#fff;
+  display:block;
+  -webkit-transition:all .3s;
+  transition:all .3s
+}
+
+.navbar-inverse #navbar-content>.nav li {
+  margin-top:0
+}
+
+.navbar-inverse #navbar-content>.nav li.active>a,.navbar-inverse #navbar-content>.nav li.active>a:hover {
+  background:#e8e8e8
+}
+
+.navbar-inverse #navbar-content>.nav li>a {
+  font-size:16px;
+  color:#333;
+  background:#fff
+}
+
+.navbar-inverse #navbar-content>.nav li>a:hover {
+  background:#eee
+}
+
+.navbar-inverse #navbar-content>.nav li.close>a,.navbar-inverse #navbar-content>.nav li.close>a:hover {
+  background:#fff
+}
+
+#sidebar-overlay {
+  display:none;
+  position:fixed;
+  z-index:101;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,.8);
+  min-width:100%
+}
+
+#landing,#landing #landing-content {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal
+}
+
+#landing {
+  display:flex;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column
+}
+
+@media screen and (min-width:768px) {
+#landing {
+  position:fixed
+}
+}
+
+#landing #landing-content {
+  position:relative;
+  z-index:100;
+  background:0 0;
+  margin-bottom:0;
+  -webkit-box-flex:1;
+  -webkit-flex:1 1 auto;
+  -ms-flex:1 1 auto;
+  flex:1 1 auto;
+  display:flex;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center
+}
+
+#landing #landing-content .content h1 {
+  font-weight:300;
+  line-height:3.3rem
+}
+
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+#landing #landing-content .content h1 {
+  position:absolute;
+  width:100%;
+  top:200px;
+  left:0;
+  text-align:center
+}
+}
+
+#landing #landing-content .content h1 #leung {
+  font-size:7.2rem
+}
+
+#landing #landing-content .content h1 #enterprises {
+  margin-left:.3rem;
+  font-size:3.78rem
+}
+
+#landing #landing-footer {
+  position:relative;
+  bottom:60px;
+  z-index:100;
+  text-align:center
+}
+
+@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+#landing #landing-footer {
+  width:100%;
+  text-align:center;
+  position:absolute;
+  bottom:60px
+}
+}
+
+#landing #particles-js {
+  z-index:99;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:url(http://i.imgur.com/4zeugpC.jpg)center 0;
+  background-size:cover
+}
+
+#about,#work {
+  position:relative;
+  z-index:100
+}
+
+#work .jumbotron {
+  padding-top:80px;
+  background:#ddd;
+  color:#333;
+  margin-bottom:0
+}
+
+#work .jumbotron .row.nopadding .col-md-4 {
+  min-height:100px;
+  max-height:200px;
+  padding:0;
+  -webkit-transition:all .3s;
+  transition:all .3s
+}
+
+#work .jumbotron .row.nopadding .col-md-4#ase {
+  background:url(//i.imgur.com/b9fhSVd.jpg?1)top center;
+  background-size:100%
+}
+
+#work .jumbotron .row.nopadding .col-md-4#ase:hover {
+  background-size:150%
+}
+
+#work .jumbotron .row.nopadding .col-md-4#neo {
+  background: url(//i.imgur.com/ZfyYcE3.jpg?1);
+  background-position: top center;
+  background-size:100%
+}
+
+#work .jumbotron .row.nopadding .col-md-4#neo:hover {
+  background-size:150%
+}
+
+#work .jumbotron .row.nopadding .col-md-4#wiss {
+  background:url(//i.imgur.com/5JwYZvv.png?1)top left;
+  background-size:100%
+}
+
+#work .jumbotron .row.nopadding .col-md-4#wiss:hover {
+  background-size:150%
+}
+
+#work .jumbotron .row.nopadding .col-md-4#saffron {
+  background:url(http://i.imgur.com/Q4ERR43.jpg?1);
+  background-size:100%;
+  background-position:top center;
+}
+
+#work .jumbotron .row.nopadding .col-md-4#saffron:hover {
+  background-size:150%;
+}
+
+@media screen and (min-width:768px) {
+#landing #landing-content .content {
+  max-width:50%
+}
+
+#landing #landing-content .content h1 {
+  font-weight:300;
+  line-height:5.775rem
+}
+
+#landing #landing-content .content h1 #leung {
+  font-size:12.6rem
+}
+
+#landing #landing-content .content h1 #enterprises {
+  margin-left:.525rem;
+  font-size:6.615rem
+}
+
+#about,#work {
+  top:100vh;
+}
+}
+
+#about .jumbotron {
+  padding-top:90px;
+  background:-webkit-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),url(http://i.imgur.com/4zeugpC.jpg);
+  background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),url(http://i.imgur.com/4zeugpC.jpg);
+  min-height:100vh;
+  margin-bottom:0;
+}
