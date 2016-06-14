@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    link(rel="canonical" href="https://old.leungenterprises.com")
+    script.
+      if (window.location.hostname !== "old.leungenterprises.com") {
+        // window.location.replace("https://old.leungenterprises.com");
+      }
+    title History | Leung Enterprises
+    meta(name="description" content="See the evolution of Leung Enterprises from their very first website to now.")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:700|Open+Sans:400,300")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet" href="styles.css")
+  body
+    .jumbotron.flex-center.text-center.trianglify
+      video#history(autoplay muted loop)
+        source(src='lib/history.mp4' type='video/mp4')
+      .container
+        h1#header History
+        p#description Legacy versions of our homepage
+        br
+        div
+          ul.nav-oldversion
+            li
+              a(href='./versions/0.1') v0.1.0
+            li
+              a(href='./versions/0.2') v0.2.0
+            li
+              a(href='./versions/1.0') v1.0
+            li
+              a(href='./versions/1.1') v1.1
+            li
+              a(href='./versions/2.0') v2.0
+            li
+              a(href='./versions/3.0') v3.0
+            li
+              a(href='https://leungenterprises.com') Current
+    script(src='https://code.jquery.com/jquery-3.0.0.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js')
+    script(src='scripts.js')
