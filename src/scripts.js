@@ -29,5 +29,5 @@ $(window).resize(function() {
 
 document.getElementById('history').addEventListener('loadedmetadata', function() {
   // start video about 3 seconds in so transition is faster
-  this.currentTime = 5;
+  this.currentTime = 3;
 }, false);
