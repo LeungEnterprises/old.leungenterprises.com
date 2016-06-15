@@ -7,7 +7,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 
 const paths = {
-  jade: ['src/index.jade'],
+  jade: ['src/index.jade', 'src/404.jade'],
   sass: ['src/styles.scss'],
   babel: ['src/scripts.js']
 };
